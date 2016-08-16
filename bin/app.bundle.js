@@ -21454,7 +21454,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _darkBaseTheme = __webpack_require__(176);
+	var _colors = __webpack_require__(176);
+
+	var _darkBaseTheme = __webpack_require__(177);
 
 	var _darkBaseTheme2 = _interopRequireDefault(_darkBaseTheme);
 
@@ -21472,14 +21474,21 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var muiTheme = (0, _getMuiTheme2.default)(_darkBaseTheme2.default);
+
 	var splashStyle = {
 		height: '100vh',
 		width: '100%',
-		textAlign: 'center'
+		textAlign: 'center',
+		margin: '0 auto',
+		backgroundColor: '#eceff1',
+		color: 'rgba(0, 0, 0, 0.87)'
 	};
 
 	var innerSplashStyle = {
-		margin: '25% 0 0'
+		boxSizing: 'border-box',
+		padding: '25% 0 0',
+		margin: '0 auto'
 	};
 
 	var gridStyle = {
@@ -21491,7 +21500,7 @@
 	var App = function App() {
 		return _react2.default.createElement(
 			_MuiThemeProvider2.default,
-			{ muiTheme: (0, _getMuiTheme2.default)(_darkBaseTheme2.default) },
+			{ muiTheme: muiTheme },
 			_react2.default.createElement(
 				'div',
 				null,
@@ -21545,47 +21554,6 @@
 
 /***/ },
 /* 176 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _colors = __webpack_require__(177);
-
-	var _colorManipulator = __webpack_require__(178);
-
-	var _spacing = __webpack_require__(179);
-
-	var _spacing2 = _interopRequireDefault(_spacing);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	  spacing: _spacing2.default,
-	  fontFamily: 'Roboto, sans-serif',
-	  palette: {
-	    primary1Color: _colors.cyan700,
-	    primary2Color: _colors.cyan700,
-	    primary3Color: _colors.grey600,
-	    accent1Color: _colors.pinkA200,
-	    accent2Color: _colors.pinkA400,
-	    accent3Color: _colors.pinkA100,
-	    textColor: _colors.fullWhite,
-	    secondaryTextColor: (0, _colorManipulator.fade)(_colors.fullWhite, 0.7),
-	    alternateTextColor: '#303030',
-	    canvasColor: '#303030',
-	    borderColor: (0, _colorManipulator.fade)(_colors.fullWhite, 0.3),
-	    disabledColor: (0, _colorManipulator.fade)(_colors.fullWhite, 0.3),
-	    pickerHeaderColor: (0, _colorManipulator.fade)(_colors.fullWhite, 0.12),
-	    clockCircleColor: (0, _colorManipulator.fade)(_colors.fullWhite, 0.12)
-	  }
-	};
-
-/***/ },
-/* 177 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21878,6 +21846,47 @@
 	var fullWhite = exports.fullWhite = 'rgba(255, 255, 255, 1)';
 	var darkWhite = exports.darkWhite = 'rgba(255, 255, 255, 0.87)';
 	var lightWhite = exports.lightWhite = 'rgba(255, 255, 255, 0.54)';
+
+/***/ },
+/* 177 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _colors = __webpack_require__(176);
+
+	var _colorManipulator = __webpack_require__(178);
+
+	var _spacing = __webpack_require__(179);
+
+	var _spacing2 = _interopRequireDefault(_spacing);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	  spacing: _spacing2.default,
+	  fontFamily: 'Roboto, sans-serif',
+	  palette: {
+	    primary1Color: _colors.cyan700,
+	    primary2Color: _colors.cyan700,
+	    primary3Color: _colors.grey600,
+	    accent1Color: _colors.pinkA200,
+	    accent2Color: _colors.pinkA400,
+	    accent3Color: _colors.pinkA100,
+	    textColor: _colors.fullWhite,
+	    secondaryTextColor: (0, _colorManipulator.fade)(_colors.fullWhite, 0.7),
+	    alternateTextColor: '#303030',
+	    canvasColor: '#303030',
+	    borderColor: (0, _colorManipulator.fade)(_colors.fullWhite, 0.3),
+	    disabledColor: (0, _colorManipulator.fade)(_colors.fullWhite, 0.3),
+	    pickerHeaderColor: (0, _colorManipulator.fade)(_colors.fullWhite, 0.12),
+	    clockCircleColor: (0, _colorManipulator.fade)(_colors.fullWhite, 0.12)
+	  }
+	};
 
 /***/ },
 /* 178 */
@@ -22246,7 +22255,7 @@
 
 	var _typography2 = _interopRequireDefault(_typography);
 
-	var _colors = __webpack_require__(177);
+	var _colors = __webpack_require__(176);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26214,7 +26223,7 @@
 	  value: true
 	});
 
-	var _colors = __webpack_require__(177);
+	var _colors = __webpack_require__(176);
 
 	var _colorManipulator = __webpack_require__(178);
 
@@ -28485,7 +28494,7 @@
 	  value: true
 	});
 
-	var _colors = __webpack_require__(177);
+	var _colors = __webpack_require__(176);
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 

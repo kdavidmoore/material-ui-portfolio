@@ -1,17 +1,25 @@
 import React from 'react';
+import {blueGrey50, darkBlack} from 'material-ui/styles/colors';
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PortfolioCard from './PortfolioCard';
 
+const muiTheme = getMuiTheme(darkBaseTheme);
+
 const splashStyle = {
 	height: '100vh',
 	width: '100%',
-	textAlign: 'center'
+	textAlign: 'center',
+	margin: '0 auto',
+	backgroundColor: '#eceff1',
+	color: 'rgba(0, 0, 0, 0.87)'
 };
 
 const innerSplashStyle = {
-	margin: '25% 0 0'
+	boxSizing: 'border-box',
+	padding: '25% 0 0',
+	margin: '0 auto'
 };
 
 const gridStyle = {
@@ -21,7 +29,7 @@ const gridStyle = {
 };
 
 const App = () => (
-	<MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+	<MuiThemeProvider muiTheme={muiTheme}>
 		<div>
 			<div style={splashStyle}>
 				<div style={innerSplashStyle}>
