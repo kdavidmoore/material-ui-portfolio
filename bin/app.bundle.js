@@ -72,6 +72,16 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var splashStyle = {
+		height: '100vh',
+		width: '100%',
+		textAlign: 'center'
+	};
+
+	var innerSplashStyle = {
+		margin: '25% 0 0'
+	};
+
 	var gridStyle = {
 		display: 'inline-block',
 		width: '30%',
@@ -82,6 +92,37 @@
 		return _react2.default.createElement(
 			'div',
 			null,
+			_react2.default.createElement(
+				'div',
+				{ style: splashStyle },
+				_react2.default.createElement(
+					_MuiThemeProvider2.default,
+					{ muiTheme: (0, _getMuiTheme2.default)(_darkBaseTheme2.default) },
+					_react2.default.createElement(
+						'div',
+						{ style: innerSplashStyle },
+						_react2.default.createElement(
+							'h1',
+							null,
+							'Keith Moore'
+						),
+						_react2.default.createElement(
+							'h5',
+							null,
+							'Web Developer'
+						)
+					)
+				)
+			),
+			_react2.default.createElement(
+				'div',
+				null,
+				_react2.default.createElement(
+					'h2',
+					null,
+					'Portfolio'
+				)
+			),
 			_react2.default.createElement(
 				'div',
 				{ style: gridStyle },
