@@ -21447,8 +21447,10 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
@@ -21472,83 +21474,176 @@
 
 	var _PortfolioCard2 = _interopRequireDefault(_PortfolioCard);
 
+	var _SocialMediaIcon = __webpack_require__(392);
+
+	var _SocialMediaIcon2 = _interopRequireDefault(_SocialMediaIcon);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var muiTheme = (0, _getMuiTheme2.default)(_darkBaseTheme2.default);
 
 	var splashStyle = {
-		height: '100vh',
-		width: '100%',
-		textAlign: 'center',
-		margin: '0 auto',
-		backgroundColor: '#eceff1',
-		color: 'rgba(0, 0, 0, 0.87)'
+	  fontFamily: 'Roboto, sans-serif',
+	  height: '100vh',
+	  width: '100%',
+	  margin: '0 auto',
+	  padding: '0',
+	  backgroundColor: '#eceff1',
+	  color: 'rgba(0, 0, 0, 0.87)'
 	};
 
 	var innerSplashStyle = {
-		boxSizing: 'border-box',
-		padding: '25% 0 0',
-		margin: '0 auto'
+	  boxSizing: 'border-box',
+	  textAlign: 'center',
+	  margin: '0 auto',
+	  padding: '25% 0 0'
+	};
+
+	var headerStyle = {
+	  fontFamily: 'Roboto, sans-serif'
+	};
+
+	var cardsWrapperStyle = {
+	  margin: '0 auto'
 	};
 
 	var gridStyle = {
-		display: 'inline-block',
-		width: '30%',
-		margin: '10px'
+	  display: 'inline-block',
+	  width: '30%',
+	  margin: '10px'
 	};
 
-	var App = function App() {
-		return _react2.default.createElement(
-			_MuiThemeProvider2.default,
-			{ muiTheme: muiTheme },
-			_react2.default.createElement(
-				'div',
-				null,
-				_react2.default.createElement(
-					'div',
-					{ style: splashStyle },
-					_react2.default.createElement(
-						'div',
-						{ style: innerSplashStyle },
-						_react2.default.createElement(
-							'h1',
-							null,
-							'Keith Moore'
-						),
-						_react2.default.createElement(
-							'h5',
-							null,
-							'Web Developer'
-						)
-					)
-				),
-				_react2.default.createElement(
-					'div',
-					null,
-					_react2.default.createElement(
-						'h2',
-						null,
-						'Portfolio'
-					)
-				),
-				_react2.default.createElement(
-					'div',
-					{ style: gridStyle },
-					_react2.default.createElement(_PortfolioCard2.default, { title: 'Cool Project', subtitle: 'This project is pretty cool.', imgSrc: 'bin/images/ag.png' })
-				),
-				_react2.default.createElement(
-					'div',
-					{ style: gridStyle },
-					_react2.default.createElement(_PortfolioCard2.default, { title: 'Another Cool Project', subtitle: 'This project is also pretty cool.', imgSrc: 'bin/images/calc.png' })
-				),
-				_react2.default.createElement(
-					'div',
-					{ style: gridStyle },
-					_react2.default.createElement(_PortfolioCard2.default, { title: 'Yet Another Cool Project', subtitle: 'This project is still pretty cool.', imgSrc: 'bin/images/langs.png' })
-				)
-			)
-		);
+	var socialStyle = {
+	  boxSizing: 'border-box',
+	  textAlign: 'center',
+	  margin: '0 auto',
+	  padding: '10px'
 	};
+
+	var App = function (_React$Component) {
+	  _inherits(App, _React$Component);
+
+	  function App() {
+	    _classCallCheck(this, App);
+
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(App).apply(this, arguments));
+	  }
+
+	  _createClass(App, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        _MuiThemeProvider2.default,
+	        { muiTheme: muiTheme },
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'div',
+	            { style: splashStyle },
+	            _react2.default.createElement(
+	              'div',
+	              { style: innerSplashStyle },
+	              _react2.default.createElement(
+	                'h1',
+	                null,
+	                'Keith Moore'
+	              ),
+	              _react2.default.createElement(
+	                'h4',
+	                null,
+	                'Software Engineer'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	              'h2',
+	              { style: headerStyle },
+	              'Portfolio'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { stype: cardsWrapperStyle },
+	            _react2.default.createElement(
+	              'div',
+	              { style: gridStyle },
+	              _react2.default.createElement(_PortfolioCard2.default, {
+	                title: 'Cool Project',
+	                subtitle: 'This project is pretty cool.',
+	                imgSrc: 'bin/images/ag.png',
+	                githubUrl: '',
+	                demoUrl: ''
+	              })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { style: gridStyle },
+	              _react2.default.createElement(_PortfolioCard2.default, {
+	                title: 'Another Cool Project',
+	                subtitle: 'This project is also pretty cool.',
+	                imgSrc: 'bin/images/calc.png',
+	                githubUrl: '',
+	                demoUrl: ''
+	              })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { style: gridStyle },
+	              _react2.default.createElement(_PortfolioCard2.default, {
+	                title: 'Yet Another Cool Project',
+	                subtitle: 'This project is still pretty cool.',
+	                imgSrc: 'bin/images/langs.png',
+	                githubUrl: '',
+	                demoUrl: ''
+	              })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	              'h2',
+	              { style: headerStyle },
+	              'Contact'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { style: socialStyle },
+	            _react2.default.createElement(_SocialMediaIcon2.default, {
+	              linkUrl: 'http://kdavidmoore.com/kdmoore_resume.pdf',
+	              icon: 'fa fa-file-text fa-stack-1x fa-inverse'
+	            }),
+	            _react2.default.createElement(_SocialMediaIcon2.default, {
+	              linkUrl: 'https://github.com/kdavidmoore',
+	              icon: 'fa fa-github fa-stack-1x fa-inverse'
+	            }),
+	            _react2.default.createElement(_SocialMediaIcon2.default, {
+	              linkUrl: 'https://linkedin.com/in/kdavidmoore',
+	              icon: 'fa fa-linkedin fa-stack-1x fa-inverse'
+	            }),
+	            _react2.default.createElement(_SocialMediaIcon2.default, {
+	              linkUrl: 'https://www.instagram.com/rocks.and.stuff/',
+	              icon: 'fa fa-instagram fa-stack-1x fa-inverse'
+	            })
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return App;
+	}(_react2.default.Component);
 
 	exports.default = App;
 
@@ -28546,6 +28641,8 @@
 	  var title = _ref.title;
 	  var subtitle = _ref.subtitle;
 	  var imgSrc = _ref.imgSrc;
+	  var githubUrl = _ref.githubUrl;
+	  var demoUrl = _ref.demoUrl;
 	  return _react2.default.createElement(
 	    _Card.Card,
 	    null,
@@ -28555,16 +28652,20 @@
 	      _react2.default.createElement('img', { src: imgSrc })
 	    ),
 	    _react2.default.createElement(_Card.CardTitle, { title: title, subtitle: subtitle }),
-	    _react2.default.createElement(
-	      _Card.CardText,
-	      null,
-	      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi. Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque. Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.'
-	    ),
+	    _react2.default.createElement(_Card.CardText, null),
 	    _react2.default.createElement(
 	      _Card.CardActions,
 	      null,
-	      _react2.default.createElement(_FlatButton2.default, { label: 'GitHub' }),
-	      _react2.default.createElement(_FlatButton2.default, { label: 'Demo' })
+	      _react2.default.createElement(
+	        'a',
+	        { href: githubUrl },
+	        _react2.default.createElement(_FlatButton2.default, { label: 'GitHub' })
+	      ),
+	      _react2.default.createElement(
+	        'a',
+	        { href: demoUrl },
+	        _react2.default.createElement(_FlatButton2.default, { label: 'Demo' })
+	      )
 	    )
 	  );
 	};
@@ -33906,6 +34007,39 @@
 	  muiTheme: _react.PropTypes.object.isRequired
 	};
 	exports.default = FlatButtonLabel;
+
+/***/ },
+/* 392 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var SocialMediaIcon = function SocialMediaIcon(_ref) {
+	    var linkUrl = _ref.linkUrl;
+	    var icon = _ref.icon;
+	    return _react2.default.createElement(
+	        "a",
+	        { href: linkUrl },
+	        _react2.default.createElement(
+	            "span",
+	            { className: "fa-stack fa-2x" },
+	            _react2.default.createElement("i", { className: "fa fa-circle fa-stack-2x" }),
+	            _react2.default.createElement("i", { className: icon })
+	        )
+	    );
+	};
+
+	exports.default = SocialMediaIcon;
 
 /***/ }
 /******/ ]);

@@ -2,21 +2,16 @@ import React from 'react';
 import {Card, CardActions, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
  
-const PortfolioCard = ({title, subtitle, imgSrc}) => (
+const PortfolioCard = ({title, subtitle, imgSrc, githubUrl, demoUrl}) => (
   <Card>
     <CardMedia>
       <img src={imgSrc} />
     </CardMedia>
     <CardTitle title={title} subtitle={subtitle} />
-    <CardText>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-      Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-      Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
-    </CardText>
+    <CardText></CardText>
     <CardActions>
-      <FlatButton label="GitHub" />
-      <FlatButton label="Demo" />
+      <a href={githubUrl}><FlatButton label="GitHub" /></a>
+      <a href={demoUrl}><FlatButton label="Demo" /></a>
     </CardActions>
   </Card>
 );
