@@ -4,7 +4,6 @@ import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import PortfolioCardsWrapper from './PortfolioCardsWrapper';
-import SocialMediaIcon from './SocialMediaIcon';
 
 const styles = {
   splash: {
@@ -23,13 +22,18 @@ const styles = {
     padding: '25% 0 0'
   },
   header: {
-    fontFamily: 'Roboto, sans-serif'
+    fontFamily: 'Roboto, sans-serif',
+    padding: '20px'
   },
-  social: {
-    boxSizing: 'border-box',
+  linksWrapper: {
+    fontFamily: 'Roboto, sans-serif',
     textAlign: 'center',
     margin: '0 auto',
-    padding: '10px'
+    maxWidth: '80%',
+  },
+  link: {
+    color: 'rgb(30, 30, 30)',
+    textDecoration: 'none'
   }
 };
 
@@ -64,41 +68,53 @@ class App extends React.Component {
   render() {
     return (
       <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
-        <div>
+        <div id="top">
           <div style={styles.splash}>
             <div style={styles.innerSplash}>
-              <h1>Keith Moore</h1>
-              <h4>Software Engineer</h4>
+              <a style={styles.link}
+              href="#portfolio">
+                <h1>Keith Moore</h1>
+                <h4>Software Engineer</h4>
+              </a>
             </div>
           </div>
 
-          <div>
+          <div id="portfolio">
             <h2 style={styles.header}>Portfolio</h2>
+            <PortfolioCardsWrapper data={cardsData} />
           </div>
 
-          <PortfolioCardsWrapper data={cardsData} />
-
-          <div>
+          <div id="contact">
             <h2 style={styles.header}>Contact</h2>
-          </div>
+            <div style={styles.linksWrapper}>
+              <h3>
+                <a style={styles.link}
+                href="http://kdavidmoore.com/kdmoore_resume.pdf">
+                resume
+                </a>
+              </h3>
 
-          <div style={styles.social}>
-            <SocialMediaIcon
-            linkUrl="http://kdavidmoore.com/kdmoore_resume.pdf" 
-            icon="fa fa-file-text fa-stack-1x fa-inverse" 
-            />
-            <SocialMediaIcon
-            linkUrl="https://github.com/kdavidmoore" 
-            icon="fa fa-github fa-stack-1x fa-inverse" 
-            />
-            <SocialMediaIcon
-            linkUrl="https://linkedin.com/in/kdavidmoore" 
-            icon="fa fa-linkedin fa-stack-1x fa-inverse" 
-            />
-            <SocialMediaIcon
-            linkUrl="https://www.instagram.com/rocks.and.stuff/"
-            icon="fa fa-instagram fa-stack-1x fa-inverse"
-            />
+              <h3>
+                <a style={styles.link}
+                href="https://github.com/kdavidmoore">
+                github
+                </a>
+              </h3>
+
+              <h3>
+                <a style={styles.link}
+                href="https://linkedin.com/in/kdavidmoore">
+                linkedin
+                </a>
+              </h3>
+              
+              <h3>
+                <a style={styles.link}
+                href="https://www.instagram.com/rocks.and.stuff/">
+                instagram
+                </a>
+              </h3>
+            </div>
           </div>
         </div>
       </MuiThemeProvider>

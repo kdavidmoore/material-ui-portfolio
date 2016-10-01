@@ -21474,10 +21474,6 @@
 
 	var _PortfolioCardsWrapper2 = _interopRequireDefault(_PortfolioCardsWrapper);
 
-	var _SocialMediaIcon = __webpack_require__(393);
-
-	var _SocialMediaIcon2 = _interopRequireDefault(_SocialMediaIcon);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21503,13 +21499,18 @@
 	    padding: '25% 0 0'
 	  },
 	  header: {
-	    fontFamily: 'Roboto, sans-serif'
+	    fontFamily: 'Roboto, sans-serif',
+	    padding: '20px'
 	  },
-	  social: {
-	    boxSizing: 'border-box',
+	  linksWrapper: {
+	    fontFamily: 'Roboto, sans-serif',
 	    textAlign: 'center',
 	    margin: '0 auto',
-	    padding: '10px'
+	    maxWidth: '80%'
+	  },
+	  link: {
+	    color: 'rgb(30, 30, 30)',
+	    textDecoration: 'none'
 	  }
 	};
 
@@ -21553,7 +21554,7 @@
 	        { muiTheme: (0, _getMuiTheme2.default)(_darkBaseTheme2.default) },
 	        _react2.default.createElement(
 	          'div',
-	          null,
+	          { id: 'top' },
 	          _react2.default.createElement(
 	            'div',
 	            { style: styles.splash },
@@ -21561,55 +21562,84 @@
 	              'div',
 	              { style: styles.innerSplash },
 	              _react2.default.createElement(
-	                'h1',
-	                null,
-	                'Keith Moore'
-	              ),
-	              _react2.default.createElement(
-	                'h4',
-	                null,
-	                'Software Engineer'
+	                'a',
+	                { style: styles.link,
+	                  href: '#portfolio' },
+	                _react2.default.createElement(
+	                  'h1',
+	                  null,
+	                  'Keith Moore'
+	                ),
+	                _react2.default.createElement(
+	                  'h4',
+	                  null,
+	                  'Software Engineer'
+	                )
 	              )
 	            )
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            null,
+	            { id: 'portfolio' },
 	            _react2.default.createElement(
 	              'h2',
 	              { style: styles.header },
 	              'Portfolio'
-	            )
+	            ),
+	            _react2.default.createElement(_PortfolioCardsWrapper2.default, { data: cardsData })
 	          ),
-	          _react2.default.createElement(_PortfolioCardsWrapper2.default, { data: cardsData }),
 	          _react2.default.createElement(
 	            'div',
-	            null,
+	            { id: 'contact' },
 	            _react2.default.createElement(
 	              'h2',
 	              { style: styles.header },
 	              'Contact'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { style: styles.linksWrapper },
+	              _react2.default.createElement(
+	                'h3',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { style: styles.link,
+	                    href: 'http://kdavidmoore.com/kdmoore_resume.pdf' },
+	                  'resume'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'h3',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { style: styles.link,
+	                    href: 'https://github.com/kdavidmoore' },
+	                  'github'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'h3',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { style: styles.link,
+	                    href: 'https://linkedin.com/in/kdavidmoore' },
+	                  'linkedin'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'h3',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { style: styles.link,
+	                    href: 'https://www.instagram.com/rocks.and.stuff/' },
+	                  'instagram'
+	                )
+	              )
 	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { style: styles.social },
-	            _react2.default.createElement(_SocialMediaIcon2.default, {
-	              linkUrl: 'http://kdavidmoore.com/kdmoore_resume.pdf',
-	              icon: 'fa fa-file-text fa-stack-1x fa-inverse'
-	            }),
-	            _react2.default.createElement(_SocialMediaIcon2.default, {
-	              linkUrl: 'https://github.com/kdavidmoore',
-	              icon: 'fa fa-github fa-stack-1x fa-inverse'
-	            }),
-	            _react2.default.createElement(_SocialMediaIcon2.default, {
-	              linkUrl: 'https://linkedin.com/in/kdavidmoore',
-	              icon: 'fa fa-linkedin fa-stack-1x fa-inverse'
-	            }),
-	            _react2.default.createElement(_SocialMediaIcon2.default, {
-	              linkUrl: 'https://www.instagram.com/rocks.and.stuff/',
-	              icon: 'fa fa-instagram fa-stack-1x fa-inverse'
-	            })
 	          )
 	        )
 	      );
@@ -28610,7 +28640,8 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var cardsWrapperStyle = {
-	  margin: '0 auto'
+	  margin: '0 auto',
+	  padding: '0px 0px 0px 20px'
 	};
 
 	var PortfolioCardsWrapper = function PortfolioCardsWrapper(_ref) {
@@ -34038,39 +34069,6 @@
 	  muiTheme: _react.PropTypes.object.isRequired
 	};
 	exports.default = FlatButtonLabel;
-
-/***/ },
-/* 393 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var SocialMediaIcon = function SocialMediaIcon(_ref) {
-	    var linkUrl = _ref.linkUrl;
-	    var icon = _ref.icon;
-	    return _react2.default.createElement(
-	        "a",
-	        { href: linkUrl },
-	        _react2.default.createElement(
-	            "span",
-	            { className: "fa-stack fa-2x" },
-	            _react2.default.createElement("i", { className: "fa fa-circle fa-stack-2x" }),
-	            _react2.default.createElement("i", { className: icon })
-	        )
-	    );
-	};
-
-	exports.default = SocialMediaIcon;
 
 /***/ }
 /******/ ]);
